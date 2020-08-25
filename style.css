@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Londrina Solid", cursive;
+  background: lightcyan;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 2rem;
+  color: black;
+}
+
+.container button {
+  display: none;
+  color: black;
+  border: none;
+}
+
+.container button:hover {
+  color: orange;
+  background: black;
+}
+
+.container button:active,
+.container button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.score .col:nth-of-type(1) {
+  background: darkblue;
+  color: white;
+  padding-top: 7px;
+}
+
+.score .col:nth-of-type(2) {
+  background: black;
+  color: white;
+  padding-top: 7px;
+}
+
+.choice:hover {
+  color: darkblue;
+  cursor: pointer;
+}
+
+.modal {
+  color: #000;
+  text-align: center;
+}
+
+.modal.lost h1,
+.modal.lost h5 {
+  color: red;
+}
+
+.modal.won h1,
+.modal.won h5 {
+  color: green;
+}

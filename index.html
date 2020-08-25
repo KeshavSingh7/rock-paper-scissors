@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/105f2a602f.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Rock Paper Scissors</h1>
+      </div>
+      <br />
+      <div>
+        <button class="btn btn-warning btn-lg" id="reset">
+          Restart Game
+        </button>
+      </div>
+      <br />
+      <br />
+      <div class="container-fluid">
+        <div class="row score" id="score">
+          <div class="col">
+            <h5>Player : <span id="player">0</span></h5>
+          </div>
+          <div class="col">
+            <h5>Computer : <span id="computer">0</span></h5>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="container-fluid">
+        <div class="row choices">
+          <div class="col">
+            <i
+              id="rock"
+              class="choice fas fa-hand-rock fa-10x"
+              data-toggle="modal"
+              data-target="#myModal"
+            ></i>
+          </div>
+          <div class="col">
+            <i
+              id="paper"
+              class="choice fas fa-hand-paper fa-10x"
+              data-toggle="modal"
+              data-target="#myModal"
+            ></i>
+          </div>
+          <div class="col">
+            <i
+              id="scissors"
+              class="choice fas fa-hand-scissors fa-10x"
+              data-toggle="modal"
+              data-target="#myModal"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-body" id="myModal">
+            <h1></h1>
+            <br />
+            <i></i>
+            <br />
+            <br />
+            <h5></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
