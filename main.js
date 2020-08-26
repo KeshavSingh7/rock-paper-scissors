@@ -34,35 +34,43 @@ function play(event) {
   if (res == 1) {
     playerPoints.innerText = +playerPoints.innerText + 1;
     if (playerPoints.innerText === "10") {
+      modal.classList.remove("lost");
+      modal.classList.add("won");
       modal.querySelector("h1").innerText = "YOU WON THE GAME!";
+      modal.querySelector("i").className = "fas fa-trophy fa-10x";
+      modal.querySelector("i").style.color = "green";
+      modal.querySelector("h5").innerText = "";
+    } else {
+      modal.classList.remove("lost");
+      modal.classList.add("won");
+      modal.querySelector("h1").innerText = "YOU WON THE ROUND!";
       modal.querySelector("i").className = document.getElementById(
         computerChoice
       ).className;
-      modal.querySelector("h5").innerText = "";
+      modal.querySelector("i").style.color = "black";
+      modal.querySelector("h5").innerText =
+        "Computer selected " + computerChoice + ".";
     }
-    modal.classList.remove("lost");
-    modal.classList.add("won");
-    modal.querySelector("h1").innerText = "YOU WON THE ROUND!";
-    modal.querySelector("i").className = document.getElementById(
-      computerChoice
-    ).className;
-    modal.querySelector("h5").innerText =
-      "Computer selected " + computerChoice + ".";
   } else if (res == 2) {
     computerPoints.innerText = +computerPoints.innerText + 1;
-    if (computerPoints.innerText) {
+    if (computerPoints.innerText === "10") {
+      modal.classList.remove("won");
+      modal.classList.add("lost");
       modal.querySelector("h1").innerText = "YOU LOST THE GAME!";
-      modal.querySelector("i").className = "";
+      modal.querySelector("i").className = "fas fa-frown fa-10x";
+      modal.querySelector("i").style.color = "red";
       modal.querySelector("h5").innerText = "";
+    } else {
+      modal.classList.remove("won");
+      modal.classList.add("lost");
+      modal.querySelector("h1").innerText = "YOU LOST THE ROUND!";
+      modal.querySelector("i").className = document.getElementById(
+        computerChoice
+      ).className;
+      modal.querySelector("i").style.color = "black";
+      modal.querySelector("h5").innerText =
+        "Computer selected " + computerChoice + ".";
     }
-    modal.classList.remove("won");
-    modal.classList.add("lost");
-    modal.querySelector("h1").innerText = "YOU LOST THE ROUND!";
-    modal.querySelector("i").className = document.getElementById(
-      computerChoice
-    ).className;
-    modal.querySelector("h5").innerText =
-      "Computer selected " + computerChoice + ".";
   } else {
     modal.classList.remove("won");
     modal.classList.remove("lost");
@@ -70,6 +78,7 @@ function play(event) {
     modal.querySelector("i").className = document.getElementById(
       computerChoice
     ).className;
+    modal.querySelector("i").style.color = "black";
     modal.querySelector("h5").innerText =
       "Computer selected " + computerChoice + ".";
   }

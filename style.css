@@ -52,6 +52,10 @@ body {
   cursor: pointer;
 }
 
+.col {
+  text-align: center;
+}
+
 .modal {
   color: #000;
   text-align: center;
@@ -62,7 +66,15 @@ body {
   color: red;
 }
 
+.modal.lost.i {
+  color: black;
+}
+
 .modal.won h1,
 .modal.won h5 {
   color: green;
+}
+
+.modal i {
+  color: black;
 }

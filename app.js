@@ -8,6 +8,7 @@ $(document).ready(function () {
         $("#player").text("0");
         $("#computer").text("0");
       }
+      $("#reset").css("display", "none");
     }
   });
 });
